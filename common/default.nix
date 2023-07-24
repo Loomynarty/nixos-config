@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, lib, ... }:
 
 {
   imports =
@@ -15,7 +15,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = lib.mkDefault "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -94,6 +94,9 @@
     wget
     git
     pciutils
+
+    firefox
+    kate
     qalculate-gtk
     nil
     xclip
@@ -116,6 +119,10 @@
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
   };
   
-   system.stateVersion = "23.05"; # Did you read the comment?
+  services.hardware.openrgb = {
+    enable = true;
+  };
+  
+  system.stateVersion = "23.05"; # Did you read the comment?
 
 }
