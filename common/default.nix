@@ -15,9 +15,11 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   boot.loader.systemd-boot.configurationLimit = 5;
-  systemd.extraConfig = ''
-    DefaultTimeoutStopSec=10s
-  '';
+  systemd = {
+    extraConfig = ''
+      DefaultTimeoutStopSec=10s
+    '';
+  };
 
   networking.hostName = lib.mkDefault "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
@@ -99,7 +101,8 @@
     wget
     curl
     pciutils
-
+    
+    firefox-devedition
     kate
     qalculate-gtk
     nil
