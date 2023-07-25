@@ -113,6 +113,7 @@
     spotify
     syncthing
     libsForQt5.filelight
+    hakuneko
   
     # Gaming
     wineWowPackages.unstableFull

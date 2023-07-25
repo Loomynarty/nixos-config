@@ -24,6 +24,13 @@
     };
   };
 
+  # Shell Aliases
+  programs.bash = {
+    shellAliases = {
+      nor = "sudo nixos-rebuild switch --flake ~/nixos-config/#p52s";
+    };
+  };
+  
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "23.05";
 }
