@@ -26,13 +26,14 @@
           ./machines/p52s
           home-manager.nixosModules.home-manager {
             home-manager = {
-              useGlobalPackages = true;
+              useGlobalPkgs = true;
               useUserPackages = true;
-              users.loomy = import ./common/loomy.nix; 
+              users.loomy = import ./home/loomy.nix; 
             };      
           } 
         ];
         specialArgs = { inherit inputs; };
+      };  
     };
   };
 }

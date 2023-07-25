@@ -4,9 +4,11 @@
   users.users.loomy = {
     isNormalUser = true;
     description = "loomy";
-    extraGroups = [ "networkmanager" 
-                    "wheel"
-                    "audio" ];
+    extraGroups = [ 
+      "networkmanager" 
+      "wheel"
+      "audio"
+    ];
   };
 
 } 
