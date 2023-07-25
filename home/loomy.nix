@@ -14,13 +14,7 @@
   home = {
     username = "loomy";
     homeDirectory = "/home/loomy";
-    packages = with pkgs; [
-      firefox-devedition
-      xclip
-      qalculate-gtk
-
-    ];
-  };
+ };
 
   # Let Home Manager install and manage itself
   programs.home-manager.enable = true;
@@ -30,10 +24,6 @@
     userName = "Loomynarty";
     userEmail = "zbspelce@gmail.com";
   };
-
-  programs.helix = {
-    enable = true;
-  }
 
   # Nicely reload system units when changing configs
   # systemd.user.startServices = "sd-switch";
