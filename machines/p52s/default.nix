@@ -3,10 +3,8 @@
 
 { inputs, lib, config, pkgs, ... }: {
   imports = [
-    # If you want to use modules from other flakes (such as nixos-hardware):
-    # inputs.hardware.nixosModules.common-cpu-amd
-    # inputs.hardware.nixosModules.common-ssd
-    inputs.hardware.nixosModules.lenovo-thinkpad-p52
+    inputs.hardware.nixosModules.common-cpu-intel
+    inputs.hardware.nixosModules.common-pc-ssd
     ../../common
     ./hardware-configuration.nix
   ];
