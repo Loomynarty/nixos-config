@@ -9,6 +9,7 @@
     [ 
       # User account
       ./loomy.nix 
+      ./software.nix
     ];
 
   # Bootloader.
@@ -93,44 +94,6 @@
     };
   };
 
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-    helix
-    wget
-    curl
-    pciutils
-    
-    firefox-devedition
-    kate
-    qalculate-gtk
-    nil
-    xclip
-    keepassxc
-    flameshot
-    onedrive
-    spotify
-    syncthing
-    libsForQt5.filelight
-    hakuneko
-  
-    # Gaming
-    wineWowPackages.unstableFull
-    discord
-
-  ];
-
-  programs.steam = {
-    enable = true;
-    remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-    dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-  };
-  
-  services.hardware.openrgb = {
-    enable = true;
-  };
-  
   system.stateVersion = "23.05"; # Did you read the comment?
 
 }

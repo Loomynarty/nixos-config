@@ -22,13 +22,14 @@
     };
   };
 
-  # Shell Aliases
-  programs.bash = {
-    shellAliases = {
-      nor = "sudo nixos-rebuild switch --flake ~/nixos-config/#p52s";
-    };
+  # Create an alias for nixos-rebuild
+  environment.shellAliases = {
+    nor = "sudo nixos-rebuild switch --flake ~/nixos-config/#p52s";
   };
-  
+
+  # Set default shell to fish
+  users.defaultUserShell = pkgs.fish;
+    
   # https://nixos.wiki/wiki/FAQ/When_do_I_update_stateVersion
   system.stateVersion = "23.05";
 }
