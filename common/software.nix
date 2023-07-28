@@ -15,17 +15,18 @@
     curl
     pciutils
     xclip
+    nvd
     
+    # Applications
     firefox-devedition
     vscodium
     nil
-    fish
     kate
     qalculate-gtk
     keepassxc
     flameshot
     onedrive
-    spotify
+    spotifyd
     syncthing
     libsForQt5.filelight
     hakuneko
@@ -42,8 +43,7 @@
     dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
   };
   
-  services.hardware.openrgb = {
-    enable = true;
-  };
+  services.hardware.openrgb = { enable = true; };
+  programs.fish.enable = true;
 
 }
