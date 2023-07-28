@@ -22,9 +22,11 @@
     };
   };
 
-  # Create an alias for nixos-rebuild
   environment.shellAliases = {
-    nor = "sudo nixos-rebuild switch --flake ~/nixos-config/#p52s";
+    # Create an alias for nixos-rebuild
+    nor = ''
+    sudo nixos-rebuild switch --flake ~/nixos-config/#p52s && ls /nix/var/nix/profiles/ | tail -n 2 | awk {'print "/nix/var/nix/profiles/" $0'} | xargs nvd diff
+    '';
   };
 
   # Set default shell to fish

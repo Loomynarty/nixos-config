@@ -32,7 +32,7 @@
     hakuneko
   
     # Gaming
-    wineWowPackages.unstableFull
+    wineWowPackages.unstable
     discord
 
   ];
