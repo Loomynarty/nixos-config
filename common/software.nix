@@ -27,9 +27,9 @@
     flameshot
     onedrive
     spotifyd
-    syncthing
     libsForQt5.filelight
     hakuneko
+    syncthingtray
   
     # Gaming
     wineWowPackages.unstable
@@ -44,6 +44,15 @@
   };
   
   services.hardware.openrgb = { enable = true; };
+
   programs.fish.enable = true;
+
+  services.syncthing = {
+    enable = true;
+    systemService = true;
+    user = "loomy";
+    dataDir = "/home/loomy";
+    configDir = "/home/loomy/.config/syncthing";
+  };
 
 }
