@@ -29,7 +29,6 @@
     spotifyd
     libsForQt5.filelight
     hakuneko
-    syncthingtray
   
     # Gaming
     wineWowPackages.unstable
